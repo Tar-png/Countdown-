@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Focus Countdown</title>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3652/3652191.png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <h2 class="title">Settings</h2>
+            
+            <div class="input-section glass">
+                <label>EVENT NAME</label>
+                <input type="text" id="eventName" placeholder="ชื่อกิจกรรม...">
+                
+                <label>TARGET DATE</label>
+                <input type="datetime-local" id="targetDate">
+                
+                <button id="saveBtn" class="primary-btn">Save This Target</button>
+            </div>
+
+            <div class="input-section glass">
+                <label>DISPLAY UNIT</label>
+                <div class="segmented-control">
+                    <select id="unitSelect">
+                        <option value="weeks">Weeks</option>
+                        <option value="days" selected>Days</option>
+                        <option value="hours">Hours</option>
+                        <option value="mins">Minutes</option>
+                        <option value="secs">Seconds</option>
+                    </select>
+                </div>
+            </div>
+        </aside>
+
+        <main class="display-area">
+            <div class="counter-content">
+                <p id="subDetail" class="sub-text"></p>
+                <h1 id="mainNumber">0</h1>
+                <p id="unitLabel" class="unit-text">DAYS LEFT</p>
+            </div>
+
+            <section class="saved-targets">
+                <div class="section-header">
+                    <label>SAVED TARGETS</label>
+                    <button id="clearAllBtn" class="clear-btn">Clear All</button>
+                </div>
+                <div class="cards-scroll-wrapper" id="cardContainer">
+                    </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
