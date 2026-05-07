@@ -20,12 +20,12 @@ body {
 
 /* Sidebar */
 .sidebar {
-    width: 350px;
+    width: 300px;
     background: rgba(230, 230, 235, 0.8);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     border-right: 1px solid rgba(0,0,0,0.1);
-    padding: 40px 25px;
+    padding: 30px 20px;
     box-sizing: border-box;
 }
 
@@ -44,15 +44,20 @@ label { font-size: 11px; font-weight: 700; color: #8E8E93; letter-spacing: 0.5px
 
 input, select {
     width: 100%;
+    max-width: 100%;
+    display: block; 
     background: rgba(255,255,255,0.5);
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 10px;
     padding: 12px;
     font-size: 16px;
     margin-bottom: 15px;
-    box-sizing: border-box;
+    box-sizing: border-box; 
     outline: none;
+    appearance: none; 
+    -webkit-appearance: none;
 }
+
 
 .primary-btn {
     width: 100%;
@@ -112,8 +117,8 @@ input, select {
 .cards-scroll-wrapper::-webkit-scrollbar { display: none; }
 
 .event-card {
-    min-width: 240px;
-    height: 130px;
+    min-width: 180px;
+    height: 100px;
     background: white;
     border-radius: 22px;
     padding: 20px;
